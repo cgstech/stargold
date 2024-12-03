@@ -4,14 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StarGold</title>
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"  crossorigin="anonymous">
 </head>
 <body>
 
-    <header>
+    <header class="header ">
+        <div class="container-nav limitador ">
+            <h1><a href="">ECOBAG's</a></h1>
+            <nav class="">
+                <ul class="links-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li>
+                        <a href="categorias.html">Categorias</a>
+                        <div class="sub-menu" style="display: none;">
+                            <ul>
+                                <li><a href="">EVA</a></li>
+                                <li><a href="">LAÇOS</a></li>
+                                <li><a href="">MASSAS</a></li>
+                                <li><a href="">VIÉS</a></li>
+                                <li><a href="">FITAS</a></li>
+                                <li><a href="">RENDAS / LÃ</a></li>
+                                <li><a href="">COLAS</a></li>
+                                <li><a href="">PEDRARIAS / ENTREMEIO</a></li>
+                                <li><a href="">APLIQUES</a></li>
+                                <li><a href="">POMPOM</a></li>
+                                <li><a href="">CHATONS</a></li>
+                                <li><a href="">MEIA PÉROLAS</a></li>
+                                <li><a href="">FLORES PRENSADAS</a></li>
+                                <li><a href="">TESOURA</a></li>
+                                <li><a href="">BOTOES</a></li>
+                                <li><a href="">ACESSORIOS</a></li>
+                                <li><a href="">LONITA</a></li>
+                                <li><a href="">FAQUINHAS</a></li>
+                                <li><a href="">NATAL</a></li>
+                                <li><a href="">ORGANIZADORES</a></li>
+                                <li><a href="">IMÃS</a></li>
+                                <li><a href="">ENCADERNAÇÃO</a></li>
+                                <li><a href="">MÁQUINA E FERRAMENTAS</a></li>
+                            </ul>
+                        </div>
+            
+                    </li>
+                    <li><a href="">Meus Pedidos</a></li>
+                    <li><a href="appf/login/index.html">Minha Conta</a></li>
+                    <li><a href="">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+          
+            <div class="icons">
+                <a href="" id="btnCar"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="" id="btnMenu"><i class="fa-solid fa-bars"></i></a>
+                <a href=""><i class="fa-regular fa-user"></i></a>
+                
+            </div>
+        </div>
         
-
+        <div class="container-cart">
+            <div class="card-carrinho">
+                <div class="cabe">
+                    <img src="https://images.tcdn.com.br/img/img_prod/866192/moletom_100_icon_pullover_areia_7683_1_c566fea71dad39cf991307e1f6333199.png" alt="">
+                </div>
+                <div class="body-carrinho">
+                <h3>Nome do Produto</h3>
+                <p>R$: 300,00</p>
+                </div>
+            </div>
+            <div class="card-carrinho">
+                <div class="cabe">
+                    <img src="https://images.tcdn.com.br/img/img_prod/866192/moletom_100_icon_pullover_areia_7683_1_c566fea71dad39cf991307e1f6333199.png" alt="">
+                </div>
+                <div class="body-carrinho">
+                <h3>Nome do Produto</h3>
+                <p>R$: 300,00</p>
+                </div>
+            </div>
+            <div class="card-carrinho">
+                <div class="cabe">
+                    <img src="https://images.tcdn.com.br/img/img_prod/866192/moletom_100_icon_pullover_areia_7683_1_c566fea71dad39cf991307e1f6333199.png" alt="">
+                </div>
+                <div class="body-carrinho">
+                <h3>Nome do Produto</h3>
+                <p>R$: 300,00</p>
+                </div>
+            </div>
+            <p>Total:R$900,00 </p>
+            <button class="finalizar-pedido">Finalizar Pedido</button>
+        </div>
     </header>
-
     <main>
 
     </main>
@@ -20,5 +102,7 @@
 
     </footer>
     
+
+    <script src="js/script.js"></script>
 </body>
 </html>

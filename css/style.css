@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Regras INICIAIS (de uso geral, sem importar muito o tamanho de tela) */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html{
+    font-size: 14px;overflow-x: hidden;scroll-behavior: smooth;
+    width: 100vw;
+    
+}
+
+
+
+img{
+    max-width: 100%;;
+   
+}
+
+body{
+    background-color: #ffff;
+    font-family: "Montserrat", serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw !important;
+}
+
+main{
+    flex:1;
+}
+
+/* Regas Pros titulos, txt, links */
+
+
+
+h2{
+    font-size: 1.2rem;
+    color: #21212a;
+    font-weight: 500;
+}
+
+h3{
+    color: #21212a;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+p{
+    color: #1f2020;
+    font-weight: 400;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: #232629;
+}
+
+/* Fim Regras Títulos x TXT */
+
+/* Regra para qualquer elemento com a classe limitador */
+.limitador{
+    max-width: 1100px;
+    margin: auto;
+    width: 95%;
+}
+
+/* Fim regras utilitarioas */
+
+
+/* CSS menu/header */
+
+.header{
+    width: 100%;
+    background: #21212a;
+    height: 13vh;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.header .container-nav{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    color: #fff;
+}
+
+h1 a{
+    display: block;
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.links-menu{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.links-menu li{
+    list-style: none;
+}
+
+.links-menu li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 5px 20px;
+    font-size: 13px;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+    
+}
+
+
+#btnMenu{
+    display: none;
+}
+
+.icons a{
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.container-cart{
+    position: absolute;
+    left: -350px;
+    transition: 1s;
+    width: 235px;
+    height: 100vh;
+    border-right: 1px solid #eee;
+    transition: 1s;
+    background: #fff;
+}
+
+
+.container-cart.show{
+    position: absolute;
+    left: 0px;
+    
+    width: 235px;
+    height: 100vh;
+    border-right: 1px solid #eee;
+    transition: 1s;
+    background: #fff;
+}
+
+.container-cart .card-carrinho{
+    border: 1px solid #21212a13;
+    padding: 10px;
+    display: flex;
+}
+
+.cabe img{
+    width: 80px;
+}
+
+.body-carrinho{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    
+}
+
+.body-carrinho h3{
+    font-size: 14px;
+}
+
+
+.finalizar-pedido{
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 865px) {
+
+    .header .container-nav{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #btnMenu{
+        display: block;
+    }
+    .links-menu{
+        position: absolute;
+        right: -300px;
+        top: 13vh;
+        transition: 1s;
+        width: 235px;
+        height: 100vh;
+        border-right: 1px solid #eee;
+        transition: 1s;
+        background: #21212a;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        
+    }
+    
+
+    .links-menu.show{
+        right: 0;
+        transition: 1s;
+        display: flex;
+    }
+
+    .links-menu li a{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 5px 20px;
+        text-align: center;
+    }
+
+    .txt-apre{
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .txt-apre .content-container {
+        display: flex; /* Alinha aside e figure lado a lado */
+        flex-direction: column;
+        gap: 20px; /* Espaçamento entre os elementos */
+    }
+
+    .txt-apre .content-container .flex-apre p {
+        width: 90%; /* Largura fixa para os parágrafos */
+        margin: 0; /* Remove margens padrão */
+        padding-top: 30px;
+    }
+}
+
+
+
+/* Fim Regras Menu */
