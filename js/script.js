@@ -82,5 +82,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    setInterval(autoSlide, 3000);  // Altera os itens a cada 3 segundos
+    setInterval(autoSlide, 5000);  // Altera os itens a cada 3 segundos
 });
