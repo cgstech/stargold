@@ -89,10 +89,12 @@ a{
 
 h1{
     color: #fff;
+    text-transform: uppercase;
 }
 
 h1 a{
     display: block;
+    font-weight: bold;
     color: #fff;
     font-size: 1.4rem;
     text-decoration: none;
@@ -104,9 +106,53 @@ h1 a{
     gap: 15px;
 }
 
-.links-menu li{
-    list-style: none;
+/* Regras para o menu dropdown (Categorias) */
+.links-menu li {
+    position: relative; /* Necessário para o posicionamento do submenu */
 }
+
+/* Estilo para o submenu */
+.sub-menu {
+    position: absolute;
+    top: 100%; /* Posiciona o submenu abaixo do item */
+    left: 0;
+    background-color: #21212a;
+    display: none; /* Inicialmente escondido */
+    width: 200px; /* Define a largura do submenu */
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.links-menu li:hover .sub-menu {
+    display: block; /* Exibe o submenu quando o item for hoverado (para desktop) */
+}
+
+.sub-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-menu ul li {
+    border-bottom: 1px solid #444;
+}
+
+.sub-menu ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.sub-menu ul li a:hover {
+    background-color: #333;
+}
+
+/* Para dispositivos móveis, sem hover */
+
+
 
 .links-menu li a{
     color: #fff;
@@ -218,6 +264,7 @@ h1 a{
         right: 0;
         transition: 1s;
         display: flex;
+        overflow: auto;
     }
 
     .links-menu li a{
@@ -229,24 +276,41 @@ h1 a{
         text-align: center;
     }
 
-    .txt-apre{
-       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .links-menu li {
+        display: block;
+        width: 100%;
     }
 
-    .txt-apre .content-container {
-        display: flex; /* Alinha aside e figure lado a lado */
-        flex-direction: column;
-        gap: 20px; /* Espaçamento entre os elementos */
+    /* Escondemos o submenu inicialmente */
+    .sub-menu {
+        display: none;
+        position: static; /* Faz com que o submenu seja exibido abaixo do item */
     }
 
-    .txt-apre .content-container .flex-apre p {
-        width: 90%; /* Largura fixa para os parágrafos */
-        margin: 0; /* Remove margens padrão */
-        padding-top: 30px;
+    /* Adicionamos um estilo de "menu" para o submenu visível em dispositivos móveis */
+    .links-menu li.active .sub-menu {
+        display: block; /* Exibe o submenu quando a classe active é adicionada */
     }
+
+    /* Estilização do botão de submenu (para controle de clique) */
+    .sub-menu-button {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Se quiser que o submenu ocupe toda a largura disponível */
+    .sub-menu ul li a {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    
 }
 
 
