@@ -316,3 +316,54 @@ h1 a{
 
 
 /* Fim Regras Menu */
+
+
+/* CSS produto card */
+.box-pp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container-pro {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde a barra de rolagem */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Anima a transição entre os produtos */
+    width: 100%;
+}
+
+.card {
+    min-width: 250px; /* Define a largura mínima dos cards */
+    margin-right: 20px; /* Espaço entre os cards */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.container-pro {
+    cursor: grab; /* Indica que o carrossel pode ser arrastado */
+}
+
+
+
+.box-produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.box-produtos figure{
+    width: 200px;
+}
